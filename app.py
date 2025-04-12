@@ -91,3 +91,7 @@ if st.button("Predict Rating"):
 
     except Exception as e:
         st.error(f"Prediction failed: {str(e)}")
+
+import os
+if not os.path.exists("movie_dict.pkl"):
+    raise FileNotFoundError("movie_dict.pkl not found. Please upload or place it in the app directory.")
